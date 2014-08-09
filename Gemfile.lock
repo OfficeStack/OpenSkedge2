@@ -40,6 +40,9 @@ GEM
     coffee-script-source (1.7.1)
     erubis (2.7.0)
     execjs (2.2.1)
+    figaro (0.7.0)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     hike (1.2.3)
     i18n (0.6.11)
     jquery-rails (3.1.1)
@@ -127,6 +130,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass
   coffee-rails
+  figaro
   jquery-rails
   pg
   rails (= 4.1.2)

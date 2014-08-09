@@ -1,27 +1,24 @@
-== README
+== Production ready Rails 4 and Heroku template
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This template contains the following:
 
-Things you may want to cover:
+* Ruby 2.1.1
 
-* Ruby version
+* Sass
 
-* System dependencies
+* Bootstrap with variable customization setup 
 
-* Configuration
+* Coffeescript
 
-* Database creation
+* Slim
 
-* Database initialization
+* Postgres
 
-* How to run the test suite
+* Unicorn
 
-* Services (job queues, cache servers, search engines, etc.)
+* Figaro
 
-* Deployment instructions
-
-* ...
+* rails_12factor for Heroku
 
 
 Please feel free to use a different markup language if you do not plan to run

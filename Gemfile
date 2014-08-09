@@ -8,9 +8,10 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'slim-rails'
+
+gem 'figaro'
 gem 'rails_12factor', group: :production
 gem 'unicorn'
-
 
 gem 'spring',        group: :development
 
