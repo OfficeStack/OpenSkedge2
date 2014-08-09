@@ -35,3 +35,12 @@ Install postgres on local machine
 rake db:create
 
 rake s. This is a rake task that runs unicorn.
+
+
+Note: When pushing to production use figaro's command to send config vars,
+
+rake figaro:heroku
+
+or 
+
+rake figaro:heroku[my-awesome-app] to pass the heroku app name
