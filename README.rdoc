@@ -44,3 +44,5 @@ rake figaro:heroku
 or 
 
 rake figaro:heroku[my-awesome-app] to pass the heroku app name
+
+Use uptime robot or pingdom to remove downtime on heroku's free worker dyno.
