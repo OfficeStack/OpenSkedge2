@@ -21,5 +21,17 @@ This template contains the following:
 * rails_12factor for Heroku
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+== Setup
+
+git clone git@github.com:jbhatab/rails-heroku-template.git
+
+bundle install
+
+Create /config/application.yml file for enviroment variables. Example is in config folder.
+
+Install postgres on local machine
+
+rake db:create
+
+rake s. This is a rake task that runs unicorn.
