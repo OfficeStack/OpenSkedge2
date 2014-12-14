@@ -17,3 +17,5 @@
 
 # Ignore enviroment variables
 /config/application.yml
+
+node_modules
