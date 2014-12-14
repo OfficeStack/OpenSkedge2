@@ -18,4 +18,6 @@
 # Ignore enviroment variables
 /config/application.yml
 
-node_modules
+/node_modules
+
+/vendor/assets/bower_components
