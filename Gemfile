@@ -1,18 +1,30 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.2'
-gem 'pg'
-gem 'bootstrap-sass'
+gem 'rails', '4.2.0.rc3'
+gem 'sqlite3', group: :development
+gem 'pg', group: :production
+gem 'rails_12factor', group: :production
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
-gem 'jquery-rails'
 gem 'slim-rails'
 
+gem 'devise'
+gem 'active_model_serializers', git: 'https://github.com/rails-api/active_model_serializers.git', branch: '0-9-stable'
+gem "bower-rails", "~> 0.9.1"
+gem "browserify-rails", "~> 0.5"
+gem "js-routes"
+gem 'turbolinks'
 gem 'figaro'
-gem 'rails_12factor', group: :production
+gem 'therubyracer'
+gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
+
 gem 'unicorn'
 
-gem 'spring',        group: :development
+group :development, :test do
+  gem 'byebug'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+end
 
 ruby "2.1.1"

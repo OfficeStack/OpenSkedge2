@@ -2,9 +2,23 @@ doctype html
 html
   head
     title Rails Heroku Production Template
-    = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application'
+    = stylesheet_link_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag 'head_dependencies', 'data-turbolinks-track' => true
+
     = csrf_meta_tags
+
   body
-    .container
+    / = yield :javascripts
+    
+    = javascript_include_tag 'components/group_index_page'
+
+    #main-container
       = yield
+
+
+
+    
+    / = javascript_include_tag 'application'
+
+
+    

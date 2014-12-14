@@ -1,0 +1,5 @@
+/ = content_for :javascripts do
+/   = javascript_include_tag 'group_index_page'
+
+= react_component('GroupIndexPage', {collection: @groups}.to_json, {prerender: false})
+
