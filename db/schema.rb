@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20141213221458) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "availabilities", force: true do |t|
     t.integer  "user_id"
     t.datetime "start_time"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 20141213221458) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "availabilities", ["user_id"], name: "index_availabilities_on_user_id"
+  add_index "availabilities", ["user_id"], name: "index_availabilities_on_user_id", using: :btree
 
   create_table "groups", force: true do |t|
     t.string   "name"
@@ -39,7 +42,7 @@ ActiveRecord::Schema.define(version: 20141213221458) do
     t.datetime "updated_at"
   end
 
-  add_index "positions", ["group_id"], name: "index_positions_on_group_id"
+  add_index "positions", ["group_id"], name: "index_positions_on_group_id", using: :btree
 
   create_table "roles", force: true do |t|
     t.string   "name"
@@ -57,8 +60,8 @@ ActiveRecord::Schema.define(version: 20141213221458) do
     t.datetime "updated_at"
   end
 
-  add_index "shifts", ["position_id"], name: "index_shifts_on_position_id"
-  add_index "shifts", ["user_id"], name: "index_shifts_on_user_id"
+  add_index "shifts", ["position_id"], name: "index_shifts_on_position_id", using: :btree
+  add_index "shifts", ["user_id"], name: "index_shifts_on_user_id", using: :btree
 
   create_table "user_positions", force: true do |t|
     t.integer  "user_id"
@@ -67,8 +70,8 @@ ActiveRecord::Schema.define(version: 20141213221458) do
     t.datetime "updated_at"
   end
 
-  add_index "user_positions", ["position_id"], name: "index_user_positions_on_position_id"
-  add_index "user_positions", ["user_id"], name: "index_user_positions_on_user_id"
+  add_index "user_positions", ["position_id"], name: "index_user_positions_on_position_id", using: :btree
+  add_index "user_positions", ["user_id"], name: "index_user_positions_on_user_id", using: :btree
 
   create_table "user_roles", force: true do |t|
     t.integer  "user_id"
@@ -77,8 +80,8 @@ ActiveRecord::Schema.define(version: 20141213221458) do
     t.datetime "updated_at"
   end
 
-  add_index "user_roles", ["role_id"], name: "index_user_roles_on_role_id"
-  add_index "user_roles", ["user_id"], name: "index_user_roles_on_user_id"
+  add_index "user_roles", ["role_id"], name: "index_user_roles_on_role_id", using: :btree
+  add_index "user_roles", ["user_id"], name: "index_user_roles_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "firstname"
@@ -97,7 +100,10 @@ ActiveRecord::Schema.define(version: 20141213221458) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "availabilities", "users"
+  add_foreign_key "shifts", "positions"
+  add_foreign_key "shifts", "users"
 end
