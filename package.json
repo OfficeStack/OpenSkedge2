@@ -1,5 +1,5 @@
 {
-  "name": "Openskedge",
+  "name": "OpenSkedge",
   "devDependencies": {
     "browserify": "~7.0.1",
     "coffeeify": "~1.0.0"

@@ -1,5 +1,5 @@
 {
-  "name": "Open Skedge",
+  "name": "OpenSkedge",
   "dependencies": {
     "react": "~0.12.1",
     "backbone-react-component": "~0.7.2",
