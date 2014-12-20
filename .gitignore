@@ -30,4 +30,3 @@ config/secrets.yml
 /vendor/assets/bower_components
 /node_modules
 *.bowerrc
-bower.json
