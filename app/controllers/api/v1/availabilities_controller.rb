@@ -1,5 +1,5 @@
-module Api
-  class AvailabilitiesController < ApplicationController
+module Api::V1
+  class AvailabilitiesController < ApiController
     def index
       @availabilities = Availability.all
       render json:  @availabilities

@@ -1,5 +1,5 @@
-module Api
-  class RolesController < ApplicationController
+module Api::V1
+  class RolesController < ApiController
     def index
       @roles = Role.all
       render json:  @roles

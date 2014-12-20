@@ -1,5 +1,5 @@
-module Api
-  class PositionsController < ApplicationController
+module Api::V1
+  class PositionsController < ApiController
     def index
       @positions = Position.all
       render json:  @positions

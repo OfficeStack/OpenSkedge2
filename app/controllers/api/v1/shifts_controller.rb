@@ -1,5 +1,5 @@
-module Api
-  class ShiftsController < ApplicationController
+module Api::V1
+  class ShiftsController < ApiController
     def index
       @shifts = Shift.all
       render json:  @shifts
