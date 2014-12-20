@@ -1,4 +1,5 @@
 #= require jquery
+#= require bootstrap-sass-official/assets/javascripts/bootstrap-sprockets
 #= require turbolinks
 #= require underscore
 #= require backbone
