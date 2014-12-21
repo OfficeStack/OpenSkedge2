@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141221053221) do
+ActiveRecord::Schema.define(version: 20141221192459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20141221053221) do
     t.integer  "group_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "paradigm",    default: "availability"
+    t.integer  "paradigm"
   end
 
   add_index "positions", ["group_id"], name: "index_positions_on_group_id", using: :btree

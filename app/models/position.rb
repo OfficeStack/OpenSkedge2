@@ -1,9 +1,6 @@
 class Position < ActiveRecord::Base
   # Constants
-  PARADIGM_AVAILABILITY = 'availability'
-  PARADIGM_FIXED_SHIFT = 'fixed_shift'
-  PARADIGM_NO_SHIFT = 'no_shift'
-  SUPPORTED_PARADIGMS = [PARADIGM_AVAILABILITY, PARADIGM_FIXED_SHIFT, PARADIGM_NO_SHIFT]
+  SUPPORTED_PARADIGMS = [:availability, :fixed_shift, :no_shift]
 
   # Relations
   belongs_to :group
@@ -15,5 +12,5 @@ class Position < ActiveRecord::Base
   validates :name, presence: true, length: { maximum: 75 }
   validates :description, length: { maximum: 1000 }
   validates :group, presence: true
-  validates :paradigm, presence: true, inclusion: { in: SUPPORTED_PARADIGMS }
+  enum paradigm: SUPPORTED_PARADIGMS
 end
