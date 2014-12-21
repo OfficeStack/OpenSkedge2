@@ -1,5 +1,5 @@
 OpenSkedge.Collections.Users = Backbone.Collection.extend
-  url: '/api/users'
+  url: '/api/v1/users'
   model: OpenSkedge.Models.User
 
   parse: (response)->

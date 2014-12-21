@@ -1,2 +1,2 @@
 OpenSkedge.Models.Position = Backbone.UndoableModel.extend
-  urlRoot: '/api/positions'
+  urlRoot: '/api/v1/positions'

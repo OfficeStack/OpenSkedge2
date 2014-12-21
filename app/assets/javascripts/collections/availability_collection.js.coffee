@@ -1,5 +1,5 @@
 OpenSkedge.Collections.Availabilities = Backbone.Collection.extend
-  url: '/api/availabilities'
+  url: '/api/v1/availabilities'
   model: OpenSkedge.Models.Availability
 
   parse: (response)->

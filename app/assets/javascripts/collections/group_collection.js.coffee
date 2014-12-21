@@ -1,5 +1,5 @@
 OpenSkedge.Collections.Groups = Backbone.Collection.extend
-  url: '/api/groups'
+  url: '/api/v1/groups'
   model: OpenSkedge.Models.Group
 
 
