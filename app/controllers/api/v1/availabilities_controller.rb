@@ -31,14 +31,15 @@ module Api::V1
 
     end
 
-  end
-
   private
     def availability_params
       params.require(:availability).permit([
+        :user_id,
         :start_time,
         :end_time,
+        :preference_level,
         :recurrence
       ])
     end
+  end
 end
