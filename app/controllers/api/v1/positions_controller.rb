@@ -35,7 +35,9 @@ module Api::V1
     def position_params
       params.require(:position).permit([
         :name,
-        :description
+        :description,
+        :group_id,
+        :paradigm
       ])
     end
 
