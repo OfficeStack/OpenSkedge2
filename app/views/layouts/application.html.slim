@@ -1,7 +1,8 @@
 doctype html
 html
   head
-    title Rails Heroku Production Template
+    title
+      = content_for?(:title) ? yield(:title) : "OpenSkedge"
     = stylesheet_link_tag 'application', 'data-turbolinks-track' => true
     = javascript_include_tag 'head_dependencies', 'data-turbolinks-track' => true
 
