@@ -8,7 +8,7 @@ employee.roles.create(name: 'Employee')
 
 # Sales group with positon and schedule
 group = Group.create(name: 'Sales', description: 'Sales team schedules.')
-position = group.positions.create(name: 'Sales Associate', description: 'Come into work and make phone calls.')
+position = group.positions.create(name: 'Sales Associate', description: 'Come into work and make phone calls.', paradigm: :fixed_shift)
 
 # Example availabilities and shifts of various types
 5.times do |i|
