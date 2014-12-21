@@ -1,19 +1,20 @@
-OpenSkedge2
-===========
+# OpenSkedge2
 
-OpenSkedge 2.x Rewrite
+OpenSkedge 2.x Rewrite. *This is under active, tumultuous development*.
 
+## Requirements
+* Ruby 2.1.x
+* PostgreSQL 9.3+
+* Node.js 0.10.x (for Bower)
 
-
-Setup
-==========
+## Setup
 
 ```
 bundle install
 
-rake bower:install
+npm install -g bower
 
-npm install
+rake bower:install
 
 rake db:create db:migrate db:seed
 
