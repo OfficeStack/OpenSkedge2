@@ -1,6 +1,27 @@
+@import "SpinKit/css/spinkit";
 // These are all the files for bootstrap
 // Place bootstrap variable overrides in "bootstrap-overrides"
 @import "bootstrap-overrides";
 @import "bootstrap-custom";
 
 // Place app styles here
+
+body, html {
+  height: 100%;
+  min-height: 100%;
+}
+
+#loader.sk-spinner-double-bounce {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+
+
+  .sk-double-bounce1, .sk-double-bounce2 {
+    background-color: #4381ca;
+  }
+}

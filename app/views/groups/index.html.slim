@@ -2,6 +2,7 @@
   = javascript_include_tag 'pages/group_index_page'
 
 #group-index-page
-
-/ = react_component('GroupIndexPage', {collection: @groups}.to_json, {prerender: false})
+  .sk-spinner-double-bounce.sk-spinner#loader
+    .sk-double-bounce1
+    .sk-double-bounce2
 

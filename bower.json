@@ -8,6 +8,7 @@
     "bootstrap-sass-official": "~3.3.1",
     "jquery": "~2.1.1",
     "font-awesome": "~4.2.0",
-    "backbone-nested-attributes": "~0.5.0"
+    "backbone-nested-attributes": "~0.5.0",
+    "SpinKit": "~1.0.0"
   }
 }

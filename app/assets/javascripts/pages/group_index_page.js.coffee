@@ -16,5 +16,8 @@ GroupIndexPage = React.createClass
 
 groups = new OpenSkedge.Collections.Groups
 
+
+
+
 groups.fetch().done ->
-  React.render GroupIndexPage(collection: groups), document.getElementById('group-index-page')
+  React.render(GroupIndexPage(collection: groups), document.getElementById('group-index-page'))
