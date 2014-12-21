@@ -11,7 +11,6 @@ gem 'slim-rails'
 gem 'devise'
 gem 'active_model_serializers', git: 'https://github.com/rails-api/active_model_serializers.git', branch: '0-9-stable'
 gem "bower-rails", "~> 0.9.1"
-gem "browserify-rails", "~> 0.5"
 gem "js-routes"
 gem 'turbolinks'
 gem 'figaro'

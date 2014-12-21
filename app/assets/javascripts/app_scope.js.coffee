@@ -1,4 +1,4 @@
-window.Openskedge =
+window.OpenSkedge =
   Models: {}
   Collections: {}
   Views: {}

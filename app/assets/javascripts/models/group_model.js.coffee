@@ -1,3 +1,2 @@
-# Openskedge.Models.Group = Backbone.UndoableModel.extend
-module.exports = Backbone.Model.extend
+OpenSkedge.Models.Group = Backbone.UndoableModel.extend
   urlRoot: '/api/groups'

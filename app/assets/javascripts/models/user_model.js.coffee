@@ -1,2 +1,2 @@
-Openskedge.Models.User = Backbone.UndoableModel.extend
+OpenSkedge.Models.User = Backbone.UndoableModel.extend
   urlRoot: '/api/users'

@@ -1,6 +1,6 @@
-Openskedge.Collections.Shifts = Backbone.Collection.extend
+OpenSkedge.Collections.Shifts = Backbone.Collection.extend
   url: '/api/shifts'
-  model: Openskedge.Models.Shift
+  model: OpenSkedge.Models.Shift
 
   parse: (response)->
     response.shifts

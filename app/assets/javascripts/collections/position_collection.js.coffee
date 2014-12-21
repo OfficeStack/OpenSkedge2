@@ -1,6 +1,6 @@
-Openskedge.Collections.Positions = Backbone.Collection.extend
+OpenSkedge.Collections.Positions = Backbone.Collection.extend
   url: '/api/positions'
-  model: Openskedge.Models.Position
+  model: OpenSkedge.Models.Position
 
   parse: (response)->
     response.positions

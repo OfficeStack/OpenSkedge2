@@ -1,8 +1,6 @@
-# Openskedge.Collections.Groups = Backbone.Collection.extend
-Group = require('../models/group_model')
-module.exports = Backbone.Collection.extend
+OpenSkedge.Collections.Groups = Backbone.Collection.extend
   url: '/api/groups'
-  model: Group
+  model: OpenSkedge.Models.Group
 
 
   parse: (response)->

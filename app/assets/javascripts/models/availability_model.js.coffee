@@ -1,2 +1,2 @@
-Openskedge.Models.Availability = Backbone.UndoableModel.extend
+OpenSkedge.Models.Availability = Backbone.UndoableModel.extend
   urlRoot: '/api/availabilities'

@@ -9,5 +9,4 @@
 #= require js-routes
 #= require app_scope
 
-#= require components
 Turbolinks.enableTransitionCache()

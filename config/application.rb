@@ -16,7 +16,6 @@ Bundler.require(*Rails.groups)
 module Openskedge
   class Application < Rails::Application
     config.sass.preferred_syntax = :sass
-    config.assets.precompile += %w( head_dependencies.js components/* )
-    config.browserify_rails.commandline_options = "-t coffeeify --extension=\".js.coffee\""
+    config.assets.precompile += %w( head_dependencies.js pages/* )
   end
 end

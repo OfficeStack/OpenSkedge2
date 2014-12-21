@@ -1,2 +1,2 @@
-Openskedge.Models.Shift = Backbone.UndoableModel.extend
+OpenSkedge.Models.Shift = Backbone.UndoableModel.extend
   urlRoot: '/api/shifts'

@@ -1,6 +1,6 @@
 {a, div, h3} = React.DOM
-Openskedge.Views.GroupList = React.createFactory React.createClass
-# module.exports = React.createFactory React.createClass
+
+OpenSkedge.Views.GroupList = React.createFactory React.createClass
   mixins: [Backbone.React.Component.mixin]
 
   render: ->
