@@ -17,6 +17,9 @@ gem 'figaro'
 gem 'therubyracer'
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 
+# ActiveRecord validators for DateTime
+gem 'date_validator'
+
 gem 'unicorn'
 
 group :development, :test do
