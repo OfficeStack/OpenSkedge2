@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141213221458) do
+ActiveRecord::Schema.define(version: 20141221053221) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,8 +21,9 @@ ActiveRecord::Schema.define(version: 20141213221458) do
     t.datetime "start_time"
     t.datetime "end_time"
     t.string   "recurrence"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "preference_level", default: 3
   end
 
   add_index "availabilities", ["user_id"], name: "index_availabilities_on_user_id", using: :btree
@@ -40,6 +41,7 @@ ActiveRecord::Schema.define(version: 20141213221458) do
     t.integer  "group_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "paradigm",    default: "availability"
   end
 
   add_index "positions", ["group_id"], name: "index_positions_on_group_id", using: :btree
