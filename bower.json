@@ -5,7 +5,7 @@
     "backbone-react-component": "~0.7.2",
     "backbone": "~1.1.2",
     "underscore": "~1.7.0",
-    "bootstrap-sass": "~3.0.2",
+    "bootstrap-sass-official": "~3.3.1",
     "jquery": "~2.1.1",
     "font-awesome": "~4.2.0",
     "backbone-nested-attributes": "~0.5.0"
