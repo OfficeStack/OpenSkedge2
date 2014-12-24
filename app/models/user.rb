@@ -1,3 +1,5 @@
+require 'digest/md5'
+
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -16,5 +18,11 @@ class User < ActiveRecord::Base
 
   def open_timecard_punch
     timecard_punches.where(end_datetime: nil).first
+  end
+
+  def gravatar_url
+    hash = Digest::MD5.hexdigest(email)
+
+    "https://www.gravatar.com/avatar/#{hash}?s=256"
   end
 end
