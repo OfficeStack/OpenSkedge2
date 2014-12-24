@@ -13,4 +13,8 @@ class User < ActiveRecord::Base
   has_many :shifts
   has_many :availabilities
   has_many :timecard_punches
+
+  def open_timecard_punch
+    timecard_punches.where(end_datetime: nil).first
+  end
 end
