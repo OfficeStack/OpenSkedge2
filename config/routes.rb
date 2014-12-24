@@ -21,5 +21,6 @@ Rails.application.routes.draw do
 
   post 'user/:id/timecard', to: 'timecard_punch#create', as: :user_timecard_punch
   delete 'user/:id/timecard', to: 'timecard_punch#destroy'
-  root 'groups#index'
+
+  root 'dashboard#show'
 end
