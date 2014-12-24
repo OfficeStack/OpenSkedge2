@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  get '/profile/:id', to: 'profile#show', as: :user
+
   resources :groups, only: [:show, :index]
 
   root 'groups#index'

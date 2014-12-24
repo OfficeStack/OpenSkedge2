@@ -1,0 +1,8 @@
+.row
+    .col-md-3
+        span.thumbnail
+            = image_tag @user.gravatar_url, class: 'img-responsive'
+    .col-md-9
+        .page-header
+            h3
+                = "#{@user.firstname} #{@user.lastname}"
