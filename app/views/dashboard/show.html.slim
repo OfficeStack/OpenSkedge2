@@ -6,9 +6,9 @@
     .col-md-4
         h4 Timeclock
         - if not current_user.open_timecard_punch
-            = button_to "Punch In", user_timecard_punch_path(current_user), method: :post
+            = button_to "Punch In", api_v1_user_timecard_path(current_user), method: :post
         - else
-            = button_to "Punch Out", user_timecard_punch_path(current_user), method: :delete
+            = button_to "Punch Out", api_v1_user_timecard_path(current_user), method: :delete
     .col-md-4
         h4 Upcoming Shifts
     .col-md-4

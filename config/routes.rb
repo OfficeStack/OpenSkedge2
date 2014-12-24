@@ -3,12 +3,15 @@ Rails.application.routes.draw do
   scope format: false do
     namespace :api do
       namespace :v1 do
-        resources :availabilities
-        resources :shifts
-        resources :groups
-        resources :positions
-        resources :roles
-        resources :users
+        resources :availabilities, except: [:new, :edit]
+        resources :shifts, except: [:new, :edit]
+        resources :groups, except: [:new, :edit]
+        resources :positions, except: [:new, :edit]
+        resources :roles, except: [:new, :edit]
+        resources :users, except: [:new, :edit] do
+          post '/timecard', to: 'timecard_punch#create'
+          delete '/timecard', to: 'timecard_punch#destroy'
+        end
       end
     end
   end
