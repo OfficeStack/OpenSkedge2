@@ -12,4 +12,5 @@ class User < ActiveRecord::Base
 
   has_many :shifts
   has_many :availabilities
+  has_many :timecard_punches
 end

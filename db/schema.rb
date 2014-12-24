@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141221192459) do
+ActiveRecord::Schema.define(version: 20141224040644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,16 @@ ActiveRecord::Schema.define(version: 20141221192459) do
   add_index "shifts", ["position_id"], name: "index_shifts_on_position_id", using: :btree
   add_index "shifts", ["user_id"], name: "index_shifts_on_user_id", using: :btree
 
+  create_table "timecard_punches", force: :cascade do |t|
+    t.integer  "user_id"
+    t.datetime "start_datetime"
+    t.datetime "end_datetime"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "timecard_punches", ["user_id"], name: "index_timecard_punches_on_user_id", using: :btree
+
   create_table "user_positions", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "position_id"
@@ -108,4 +118,5 @@ ActiveRecord::Schema.define(version: 20141221192459) do
   add_foreign_key "availabilities", "users"
   add_foreign_key "shifts", "positions"
   add_foreign_key "shifts", "users"
+  add_foreign_key "timecard_punches", "users"
 end

@@ -19,5 +19,7 @@ Rails.application.routes.draw do
 
   resources :groups, only: [:show, :index]
 
+  post 'user/:id/timecard', to: 'timecard_punch#create', as: :user_timecard_punch
+  delete 'user/:id/timecard', to: 'timecard_punch#destroy'
   root 'groups#index'
 end
