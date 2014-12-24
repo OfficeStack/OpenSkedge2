@@ -1,0 +1,17 @@
+nav.navbar.navbar-default.navbar-fixed-top role="navigation"
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button"
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      = link_to "OpenSkedge", root_path, class: 'navbar-brand'
+    .navbar-collapse.collapse.navbar-responsive-collapse
+      - if user_signed_in?
+        ul.nav.navbar-nav
+          li
+            = link_to "My Positions", "#"
+        ul.nav.navbar-nav
+          li
+            = link_to "My Profile", current_user

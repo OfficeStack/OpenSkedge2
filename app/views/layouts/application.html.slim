@@ -9,9 +9,14 @@ html
     = csrf_meta_tags
 
   body
+    = render :partial => 'shared/navbar'
 
-    .container
+    .container-fluid
       = yield
+      hr
+      footer.text-muted
+        p
+          | Copyright &copy; 2014 OfficeStack
 
 
     = yield :javascripts
