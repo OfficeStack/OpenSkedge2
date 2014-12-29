@@ -5,7 +5,7 @@ RSpec.describe Availability, :type => :model do
     it { should belong_to(:user) }
   end
 
-  describe 'Validatoins' do
+  describe 'Validations' do
     let(:preference_range) { (Availability::LOW_PREFERENCE..Availability::HIGH_PREFERENCE) }
 
     it { should validate_presence_of(:user) }
